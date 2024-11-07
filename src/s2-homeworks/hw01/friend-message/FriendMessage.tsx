@@ -1,49 +1,59 @@
-import React from 'react'
-import s from './FriendMessage.module.css'
+import React from "react";
+import s from "./FriendMessage.module.css";
+import { message0 } from "../HW1";
+import Message from "../message/Message";
 
 // создать тип вместо any и отобразить приходящие данные
-const FriendMessage = (props: any) => {
-    return (
-        <div
-            id={'hw1-friend-message-' + props.message.id}
-            className={s.friendMessage}
-        >
-            <div className={s.friendImageAndText}>
-                <img
-                    id={'hw1-friend-avatar-' + props.message.id}
-                    // создаёт студент
+type MessageProps = {
+  id: string;
+  avatar: string;
+  name: string;
+  text: string;
+  time: number;
+  message: string;
+};
+const FriendMessage = ({
+  id,
+  avatar,
+  name,
+  text,
+  time,
+  message,
+}: MessageProps) => {
+  return (
+    <div id={"hw1-friend-message-" + id} className={s.friendMessage}>
+      <div className={s.friendImageAndText}>
+        <img
+          id={"hw1-friend-avatar-" + id}
+          alt={`${name}'s avatar`}
+          className={s.friendImageAndText}
 
-                    //
-                />
-                <div className={s.friendText}>
-                    <div
-                        id={'hw1-friend-name-' + props.message.id}
-                        className={s.friendName}
-                    >
-                        {/*создаёт студент*/}
+          // создаёт студент
+          //
+        />
+        <div className={s.friendText}>
+          <div id={"hw1-friend-name-" + id} className={s.friendName}>
+            {name}
+            {/* создаёт студент */}
 
-                        {/**/}
-                    </div>
-                    <pre
-                        id={'hw1-friend-text-' + props.message.id}
-                        className={s.friendMessageText}
-                    >
-                        {/*создаёт студент*/}
+            {/**/}
+          </div>
+          <pre id={"hw1-friend-text-" + id} className={s.friendMessageText}>
+            {text}
+            {/*создаёт студент*/}
 
-                        {/**/}
-                    </pre>
-                </div>
-            </div>
-            <div
-                id={'hw1-friend-time-' + props.message.id}
-                className={s.friendTime}
-            >
-                {/*создаёт студент*/}
-
-                {/**/}
-            </div>
+            {/**/}
+          </pre>
         </div>
-    )
-}
+      </div>
+      <div id={"hw1-friend-time-" + id} className={s.friendTime}>
+        {time}
+        {/*создаёт студент*/}
 
-export default FriendMessage
+        {/**/}
+      </div>
+    </div>
+  );
+};
+
+export default FriendMessage;
