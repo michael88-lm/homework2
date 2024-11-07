@@ -19,6 +19,7 @@ const Message = ({ id, avatar, name, text, time }: MessagePropsType) => {
           id={"hw1-avatar-1"}
           alt={`${name}'s avatar`}
           className="imageAndText"
+          src={avatar}
           // создаёт студент
 
           //
@@ -31,7 +32,7 @@ const Message = ({ id, avatar, name, text, time }: MessagePropsType) => {
             {/**/}
           </div>
           <pre id={"hw1-text-1"} className={s.messageText}>
-            {"Hi! i like animals!"}
+            {"some new text"}
             {/*создаёт студент*/}
 
             {/**/}
