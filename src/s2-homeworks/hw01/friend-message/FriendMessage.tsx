@@ -18,6 +18,7 @@ const FriendMessage = ({ id, avatar, name, text, time }: MessageProps) => {
         <img
           id={"hw1-friend-avatar-1"}
           alt={`${name}'s avatar`}
+          src={"/message-sender/avatar.png"}
           className={s.friendImageAndText}
 
           // создаёт студент
@@ -25,13 +26,13 @@ const FriendMessage = ({ id, avatar, name, text, time }: MessageProps) => {
         />
         <div className={s.friendText}>
           <div id={"hw1-friend-name-1"} className={s.friendName}>
-            {name}
+            {"Tom"}
             {/* создаёт студент */}
 
             {/**/}
           </div>
           <pre id={"hw1-friend-text-1"} className={s.friendMessageText}>
-            {text}
+            {"Good man"}
             {/*создаёт студент*/}
 
             {/**/}
@@ -39,7 +40,7 @@ const FriendMessage = ({ id, avatar, name, text, time }: MessageProps) => {
         </div>
       </div>
       <div id={"hw1-friend-time-1"} className={s.friendTime}>
-        {time}
+        {"14:00"}
         {/*создаёт студент*/}
 
         {/**/}

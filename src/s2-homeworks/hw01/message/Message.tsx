@@ -7,7 +7,7 @@ export type MessagePropsType = {
   avatar: string;
   name: string;
   text: string;
-  time: number;
+  time: string;
 };
 
 // нужно отобразить приходящие данные
@@ -25,13 +25,13 @@ const Message = ({ id, avatar, name, text, time }: MessagePropsType) => {
         />
         <div className={s.text}>
           <div id={"hw1-name-1"} className={s.name}>
-            {name}
+            {"Bred"}
             {/*создаёт студент*/}
 
             {/**/}
           </div>
           <pre id={"hw1-text-1"} className={s.messageText}>
-            {text}
+            {"Hi! i like animals!"}
             {/*создаёт студент*/}
 
             {/**/}
@@ -39,7 +39,7 @@ const Message = ({ id, avatar, name, text, time }: MessagePropsType) => {
         </div>
       </div>
       <div id={"hw1-time-1"} className={s.time}>
-        {time}
+        {"21:00"}
         {/*создаёт студент*/}
 
         {/**/}

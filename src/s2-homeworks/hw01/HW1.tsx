@@ -36,7 +36,7 @@ export const message0: MessageType = {
     name: "Some Name", // можно менять
   },
   message: {
-    text: "some textsome textsome textsome textsome textsome textsome text", // можно менять
+    text: "some textsome textsome ", // можно менять
     time: "22:00", // можно менять
   },
 };
@@ -63,10 +63,8 @@ const HW1 = () => {
             avatar={avatar}
             id={"0"}
             name={"Some Name"}
-            text={
-              "some textsome textsome textsome textsome textsome textsome text"
-            }
-            time={0}
+            text={"Hello! My name is Bred"}
+            time={"12:00"}
           />
           <FriendMessage
             id={"100"}
