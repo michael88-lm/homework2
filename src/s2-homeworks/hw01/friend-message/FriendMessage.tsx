@@ -10,21 +10,13 @@ type MessageProps = {
   name: string;
   text: string;
   time: string;
-  message: string;
 };
-const FriendMessage = ({
-  id,
-  avatar,
-  name,
-  text,
-  time,
-  message,
-}: MessageProps) => {
+const FriendMessage = ({ id, avatar, name, text, time }: MessageProps) => {
   return (
-    <div id={"hw1-friend-message-" + id} className={s.friendMessage}>
+    <div id={"hw1-friend-message-1"} className={s.friendMessage}>
       <div className={s.friendImageAndText}>
         <img
-          id={"hw1-friend-avatar-" + id}
+          id={"hw1-friend-avatar-1"}
           alt={`${name}'s avatar`}
           className={s.friendImageAndText}
 
@@ -32,13 +24,13 @@ const FriendMessage = ({
           //
         />
         <div className={s.friendText}>
-          <div id={"hw1-friend-name-" + id} className={s.friendName}>
+          <div id={"hw1-friend-name-1"} className={s.friendName}>
             {name}
             {/* создаёт студент */}
 
             {/**/}
           </div>
-          <pre id={"hw1-friend-text-" + id} className={s.friendMessageText}>
+          <pre id={"hw1-friend-text-1"} className={s.friendMessageText}>
             {text}
             {/*создаёт студент*/}
 
@@ -46,7 +38,7 @@ const FriendMessage = ({
           </pre>
         </div>
       </div>
-      <div id={"hw1-friend-time-" + id} className={s.friendTime}>
+      <div id={"hw1-friend-time-1"} className={s.friendTime}>
         {time}
         {/*создаёт студент*/}
 

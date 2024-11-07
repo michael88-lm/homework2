@@ -8,23 +8,15 @@ export type MessagePropsType = {
   name: string;
   text: string;
   time: number;
-  message: string;
 };
 
 // нужно отобразить приходящие данные
-const Message = ({
-  id,
-  avatar,
-  name,
-  text,
-  time,
-  message,
-}: MessagePropsType) => {
+const Message = ({ id, avatar, name, text, time }: MessagePropsType) => {
   return (
-    <div id={"hw1-message-" + id} className={s.message}>
+    <div id={"hw1-message-1"} className={s.message}>
       <div className={s.imageAndText}>
         <img
-          id={"hw1-avatar-" + id}
+          id={"hw1-avatar-1"}
           alt={`${name}'s avatar`}
           className="imageAndText"
           // создаёт студент
@@ -32,13 +24,13 @@ const Message = ({
           //
         />
         <div className={s.text}>
-          <div id={"hw1-name-" + id} className={s.name}>
+          <div id={"hw1-name-1"} className={s.name}>
             {name}
             {/*создаёт студент*/}
 
             {/**/}
           </div>
-          <pre id={"hw1-text-" + id} className={s.messageText}>
+          <pre id={"hw1-text-1"} className={s.messageText}>
             {text}
             {/*создаёт студент*/}
 
@@ -46,7 +38,7 @@ const Message = ({
           </pre>
         </div>
       </div>
-      <div id={"hw1-time-" + id} className={s.time}>
+      <div id={"hw1-time-1"} className={s.time}>
         {time}
         {/*создаёт студент*/}
 

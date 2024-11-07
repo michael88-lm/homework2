@@ -16,7 +16,17 @@ import { text } from "stream/consumers";
  * */
 
 // нужно создать правильный тип вместо any
-export type MessageType = any;
+export type MessageType = {
+  id: number;
+  user: {
+    avatar: string;
+    name: string;
+  };
+  message: {
+    text: string;
+    time: string;
+  };
+};
 
 // структуру объекта не менять
 export const message0: MessageType = {
@@ -50,7 +60,6 @@ const HW1 = () => {
         {/*проверка отображения (не менять)*/}
         <div>
           <Message
-            message={message0}
             avatar={avatar}
             id={"0"}
             name={"Some Name"}
@@ -60,7 +69,6 @@ const HW1 = () => {
             time={0}
           />
           <FriendMessage
-            message={friendMessage0}
             id={"100"}
             avatar={"avatar"}
             name={"Friend Name"}
@@ -69,7 +77,7 @@ const HW1 = () => {
           />
         </div>
 
-        {/*для автоматической проверки дз (не менять)*/}
+        {/* для автоматической проверки дз (не менять) */}
         <MessageSender M={Message} />
       </div>
     </div>
