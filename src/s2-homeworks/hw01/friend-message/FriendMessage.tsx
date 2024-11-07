@@ -9,7 +9,7 @@ type MessageProps = {
   avatar: string;
   name: string;
   text: string;
-  time: number;
+  time: string;
   message: string;
 };
 const FriendMessage = ({

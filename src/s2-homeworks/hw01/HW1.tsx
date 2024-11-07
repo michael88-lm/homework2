@@ -52,18 +52,20 @@ const HW1 = () => {
           <Message
             message={message0}
             avatar={avatar}
-            id={0}
-            name={""}
-            text={""}
+            id={"0"}
+            name={"Some Name"}
+            text={
+              "some textsome textsome textsome textsome textsome textsome text"
+            }
             time={0}
           />
           <FriendMessage
             message={friendMessage0}
-            id={""}
-            avatar={""}
-            name={""}
-            text={""}
-            time={0}
+            id={"100"}
+            avatar={"avatar"}
+            name={"Friend Name"}
+            text={"зеркальное сообщение для тренировки css"}
+            time={"22:00"}
           />
         </div>
 

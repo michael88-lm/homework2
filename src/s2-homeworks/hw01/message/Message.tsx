@@ -3,7 +3,7 @@ import s from "./Message.module.css";
 
 // нужно создать правильный тип вместо any
 export type MessagePropsType = {
-  id: number;
+  id: string;
   avatar: string;
   name: string;
   text: string;
