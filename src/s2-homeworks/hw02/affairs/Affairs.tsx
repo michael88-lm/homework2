@@ -20,11 +20,11 @@ function Affairs(props: AffairsPropsType) {
     // need to fix
   };
   const setMiddle = () => {
-    props.setFilter("all");
+    props.setFilter("middle");
     // need to fix
   };
   const setLow = () => {
-    props.setFilter("all");
+    props.setFilter("low");
     // need to fix
   };
 
