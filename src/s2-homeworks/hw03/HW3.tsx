@@ -27,7 +27,7 @@ type SetUsersType = (newUsers: UserType[]) => void;
 
 export const pureAddUserCallback = (
   name: string,
-  setUsers:SetUsersType,
+  setUsers: SetUsersType,
   users: UserType[]
 ) => {
   // need to fix any
