@@ -22,9 +22,12 @@ export const pureAddUser = (
   // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
 };
 
-export const pureOnBlur = (name: string, setError: any) => {
+export const pureOnBlur = (
+  name: string,
+  setError: (message: string) => void
+) => {
   if (name.trim() === "") {
-    setError("Ошибка!!");
+    setError("Не может быть пустым");
   }
   // если имя пустое - показать ошибку
 };
@@ -52,9 +55,11 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
 
   const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
     // need to fix any
-    setName(e.currentTarget.value); // need to fix
-
-    error && setError("");
+    const inputName = e.currentTarget.value;
+    setName(inputName);
+    if (error && inputName.trim() !== "") {
+      setError("");
+    }
   };
   const addUser = () => {
     pureAddUser(name, setError, setName, addUserCallback);
