@@ -57,7 +57,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     // need to fix any
     const inputName = e.currentTarget.value;
     setName(inputName);
-    if (error && inputName.trim() !== "") {
+    if (error) {
       setError("");
     }
   };
