@@ -14,7 +14,7 @@ export const pureAddUser = (
   addUserCallback: (name: string) => void
 ) => {
   if (name.trim() === "") {
-    setError("Не может быть пустым");
+    setError('Ошибка! Введите имя!');
   } else {
     addUserCallback(name.trim()); // Добавляем пользователя
     setName(""); // Сбрасываем поле ввода
@@ -27,7 +27,7 @@ export const pureOnBlur = (
   setError: (message: string) => void
 ) => {
   if (name.trim() === "") {
-    setError("Не может быть пустым");
+    setError('Ошибка! Введите имя!');
   }
   // если имя пустое - показать ошибку
 };
