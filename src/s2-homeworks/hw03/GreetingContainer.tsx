@@ -62,15 +62,27 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     }
   };
   const addUser = () => {
-    pureAddUser(name, setError, setName, addUserCallback);
+    if (name.trim() === "") {
+      setError("Не может быть пустым");
+    } else {
+      addUserCallback(name.trim());
+      setName("");
+    }
+    // pureAddUser(name, setError, setName, addUserCallback);
   };
 
   const onBlur = () => {
-    pureOnBlur(name, setError);
+    if (name.trim() === "") {
+      setError("Не может быть пустым");
+    }
+    // pureOnBlur(name, setError);
   };
 
   const onEnter = (e: KeyboardEvent<HTMLInputElement>) => {
-    pureOnEnter(e, addUser);
+    if (e.key === "Enter") {
+      addUser();
+    }
+    // pureOnEnter(e, addUser);
   };
 
   const totalUsers = users.length; // need to fix
