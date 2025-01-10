@@ -1,4 +1,4 @@
-import React from 'react'
+import  React from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Error404 from './pages/Error404'
 import PreJunior from './pages/PreJunior'
@@ -18,10 +18,13 @@ function Pages() {
             <Routes>
                 {/*роутинг будут писать студенты*/}
                 {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу /pre-junior*/}
-                {/*<Route ...*/}
+                <Route path={"/"} element={<Navigate to={"/pre-junior"} />}/>
 
                 {/*роуты для /pre-junior, /junior, /junior-plus*/}
-                {/*<Route ...*/}
+                <Route path={"/PreJunior"} element={<PreJunior />}/>
+                <Route path={"/JuniorPlus"} element={<JuniorPlus />}/>
+                <Route path={"/Junior"} element={<Junior />}/>
+                <Route path="/*" element={<Navigate to={"Error404"}  />} />
                 {/*<Route ...*/}
                 {/*<Route ...*/}
 
