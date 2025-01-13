@@ -37,7 +37,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
     }
 ) => {
     const [editMode, setEditMode] = useState<boolean>(false)
-    const [localValue, setLocalValue] = useState<string>('')
+    const [localValue, setLocalValue] = useState<string>("")
     const {children, onDoubleClick, className, defaultText, ...restSpanProps} =
     spanProps || {}
 
@@ -70,6 +70,9 @@ setEditMode(true)
                     onBlur={onBlurCallback}
                     onEnter={onEnterCallback}
                     className={s.input}
+                    value={localValue}
+                    onChangeText={setLocalValue}
+
                     {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
                 />
             ) : (
