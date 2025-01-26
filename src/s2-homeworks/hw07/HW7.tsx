@@ -18,7 +18,14 @@ const arr = [
 ] // value может быть изменено
 
 const HW7 = () => {
-    const [value, onChangeOption] = useState(1) // селект и радио должны работать синхронно
+    // const [value, onChangeOption] = useState(1) // селект и радио должны работать синхронно
+
+    const [value, setValue] = useState(1);
+
+    const onChangeOption = (option: number) => {
+        setValue(option);
+    };
+
 
     return (
         <div id={'hw7'}>
