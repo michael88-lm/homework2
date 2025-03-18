@@ -4,7 +4,7 @@ type ActionType =
     | { type: 'sort'; payload: 'up' | 'down' }
     | { type: 'check'; payload: number }
 
-export const homeWorkReducer = (state: UserType[], action: ActionType): any => { // need to fix any
+export const homeWorkReducer = (state: UserType[], action: ActionType):UserType[] => { // need to fix any
     switch (action.type) {
         case 'sort': { // by name
             if (action.payload ==="up"){
@@ -17,7 +17,7 @@ export const homeWorkReducer = (state: UserType[], action: ActionType): any => {
         case 'check': {
             return state.filter((user: { age: number; }) => user.age >= action.payload);
 
-            return state // need to fix
+
         }
         default:
             return state
