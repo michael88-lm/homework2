@@ -1,7 +1,11 @@
 .container {
+
+
 }
 
 .wrapper {
+    width: 200px;
+    margin-left: 20px;
 }
 
 .number {
