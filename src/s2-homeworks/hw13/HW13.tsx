@@ -30,7 +30,7 @@ const HW13 = () => {
         setCode('')
         setImage('')
         setText('')
-        setInfo('...loading')
+        setInfo('...Loading')
         setIsLoading(true)
 
 
@@ -44,7 +44,9 @@ const HW13 = () => {
 
             })
             .catch((e) => {
-                if(e.response ) {
+                console.log(e.response,"e.response")
+                console.log( e.response.status)
+                if(e.response) {
                     const status = e.response.status
                     if (status === 400) {
                         setCode('Ошибка 400!')
@@ -56,9 +58,13 @@ const HW13 = () => {
                         setImage(error500)
                         setText(e.response.data.errorText || '')
                         setInfo(e.response.data.info || '')
+                    } else {
+                        setCode('Error!')
+                        setImage(errorUnknown)
+                        setText(e.message || 'Unknown error')
+                        setInfo('Error')
                     }
                 } else {
-
                     setCode('Error!')
                     setImage(errorUnknown)
                     setText(e.message || 'Unknown error')
@@ -67,8 +73,7 @@ const HW13 = () => {
             })
             .finally(() => {
                 setIsLoading(false)
-                // дописать
-
+                console.log("finaly")
             })
     }
 
