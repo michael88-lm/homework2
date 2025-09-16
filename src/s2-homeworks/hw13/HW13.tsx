@@ -44,8 +44,6 @@ const HW13 = () => {
 
             })
             .catch((e) => {
-                console.log(e.response,"e.response")
-                console.log( e.response.status)
                 if(e.response) {
                     const status = e.response.status
                     if (status === 400) {
@@ -73,7 +71,7 @@ const HW13 = () => {
             })
             .finally(() => {
                 setIsLoading(false)
-                console.log("finaly")
+
             })
     }
 
